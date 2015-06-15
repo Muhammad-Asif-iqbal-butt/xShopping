@@ -1,0 +1,45 @@
+﻿@model MVC.Models.Product
+
+@{
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2 style="background-color:darkgoldenrod">Delete</h2>
+
+<h3 style="background-color:darkgoldenrod; font-size:20px">Are you sure you want to delete this?</h3>
+<div class="box" style="background-color:darkkhaki">
+<form action="~/Admin/dPro/@Model.Id" class="form-horizontal" role="form" method="post">
+    <h4 style="background-color:darkgoldenrod">Product</h4>
+    <table border="1" style="margin-top:3%; width:80%; line-height:22PX; background-color:darkkhaki">
+
+        <tr><th><h5>ID</h5></th><th><h5>Name</h5></th><th><h5>Description</h5></th><th><h5>Color ID</h5></th><th><h5>Price</h5></th></tr>
+
+              <tr>
+                  <td style="font-size:20px">@Model.Id</td>
+                  <td style="font-size:20px">@Model.Name</td>
+                  <td style="font-size:20px">@Model.Description</td>
+                  <td style="font-size:20px">@Model.Color_Id</td>
+                  <td style="font-size:20px">@Model.Price</td>
+               
+            </tr>
+    </table>
+    @*<div class="display-label">
+        @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Color_Id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Price)
+    </div>*@
+    <input type="submit" value="Delete" class="btn btn-danger"  /> 
+ </form>
+    
+</div>

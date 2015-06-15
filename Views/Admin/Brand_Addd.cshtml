@@ -1,0 +1,25 @@
+﻿ @using MVC.Models
+@model List<Sub_Categories>
+@{
+    Layout = null;
+}
+<div class="form-group">
+    <label class="col-lg-3 control-label" style="font-size:16px">Sub Categories: </label>
+    <div class="col-lg-3 ">
+        <select class="from-control " name="sub_cat" style="font-size:20px">
+            @foreach (Sub_Categories v in Model)
+            {
+                <option>@v.Name</option>
+            }
+        </select>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="col-lg-3 control-label" style="font-size:20px">Enter Brand Name: </label>
+    <div class="col-lg-3" >
+        <input type="text" name="brand" placeholder="Enter Brand name" required style="font-size:20px">
+    </div>
+</div>
+
+

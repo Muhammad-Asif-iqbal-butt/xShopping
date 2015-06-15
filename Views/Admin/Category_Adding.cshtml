@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "~/Views/Shared/_Admin.cshtml";
+ }
+<html>
+<head>
+    <title>
+</title>    </head>
+<body >
+    <div>
+        <h3 style="margin-left:50px; font-weight:500 ;background-color:darkgoldenrod">Add Category</h3>
+        <hr style="margin-left:50px; width:900px" />
+    </div>
+
+    <div style="background-color:darkkhaki">
+        <form action="~/Admin/Category_Adding2" class="form-horizontal" role="form" method="post">
+
+            <div class="form-group">
+                <label class="control-label col-lg-3" for="name" style="font-size:20px">Name: </label>
+                <div class="col-lg-4">
+                    <input type="text" class="form-control" data-val-required="Field is required" required name="name" placeholder="Enter Name" />
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-lg-offset-3 col-lg-10">
+                    <input type="submit" value="Submit" class="btn btn-success" />
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>

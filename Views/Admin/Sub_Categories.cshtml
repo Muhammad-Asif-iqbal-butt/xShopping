@@ -1,0 +1,61 @@
+﻿@{
+
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+@using MVC.Models;
+<body style="background-color:darkgray">
+    <div style="background-color:CaptionText; width:800px; height:50px">
+        <form action="~/Admin/SearchP" class="form-horizontal" role="form" method="post">
+
+
+            <div class="form-group">
+
+                <div class="col-lg-5 pull-left">
+                    <input type="text" class="form-control" name="name" placeholder="Search Products" />
+                </div>
+                <div class="col-lg- pull-left">
+                    <input type="submit" value="Search" class="btn btn-success" />
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <h1>      </h1>
+    <h2 style="background-color:darkgoldenrod">Sub Categories</h2>
+
+    @{
+        MyEntities my = new MyEntities();
+        IEnumerable<Categories> myList = my.Categories.ToList();
+    }
+
+    <div>
+        @foreach (Categories c in myList)
+        {
+            <h3>@c.Name</h3>
+            <table border="1" style="margin-top: 3%; width: 80%; line-height: 22PX; background-color: darkkhaki">
+
+                <tr><th><h5>ID</h5></th><th><h5>Name</h5></th><th><h5>Details</h5></th><th><h5>Delete</h5></th><th><h5>Update</h5></th></tr>
+
+                @foreach (Sub_Categories sub in c.Sub_Categories)
+                {
+                    <tr>
+                        <td><h5>@sub.Id</h5></td>
+                        <td><h6>@sub.Name</h6></td>
+                        <td>
+                            <a style="font-size:16px; color:red" href="~/Admin/Sub_Cat_Details/@sub.Id">View Details</a>
+                        </td>
+                        <td style="background-color:red">
+                            <a style="font-size:16px; color:papayawhip" href="~/Admin/Sub_Cat_Delete/@sub.Id">Delete</a>
+                        </td>
+                        <td>
+                            <a style="font-size:16px; color:green" href="~/Admin/B_Update/@sub.Id">Update</a>
+                        </td>
+                    </tr>
+                }
+
+
+            </table>
+        }
+    </div>
+</body>
