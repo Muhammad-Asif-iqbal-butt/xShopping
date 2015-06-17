@@ -10,16 +10,14 @@
         <AssociationConnector Association="MyModel.CustomerCart" />
         <EntityTypeShape EntityType="MyModel.Brand" Width="1.5" PointX="6.875" PointY="0.75" />
         <EntityTypeShape EntityType="MyModel.Categories" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="MyModel.Color" Width="1.5" PointX="8.375" PointY="6.625" />
         <EntityTypeShape EntityType="MyModel.Product" Width="1.5" PointX="7.125" PointY="3.25" />
-        <EntityTypeShape EntityType="MyModel.Size" Width="1.5" PointX="4.875" PointY="6.625" />
         <EntityTypeShape EntityType="MyModel.Sub_Categories" Width="1.5" PointX="4.75" PointY="0.75" />
         <AssociationConnector Association="MyModel.CategoriesSub_Categories" />
         <AssociationConnector Association="MyModel.Sub_CategoriesBrand" />
-        <AssociationConnector Association="MyModel.ProductSize" />
-        <AssociationConnector Association="MyModel.ProductColor" />
         <AssociationConnector Association="MyModel.ProductCart" />
         <AssociationConnector Association="MyModel.BrandProduct" />
+        <EntityTypeShape EntityType="MyModel.Color" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="MyModel.Size" Width="1.5" PointX="2.75" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
