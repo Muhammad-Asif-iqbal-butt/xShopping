@@ -58,8 +58,49 @@
 </head>
 
 <body style="background-color:darkgray">
+    <nav class="navbar navbar-inverse" role="navigation" style="background-color:lightgoldenrodyellow">
+        <div class="navbar-brand">
+            <a class="navbar-text" href="#"> </a>
+            <img src="~/images/logo.jpg" alt="No Image" style="width:100px; height:50px">
+        </div>
+
+        @if (Session["user"] == null)
+            {
+                                <ul class="nav navbar-nav pull-right list-inline > li">
+                                    <li><a href="~/Home/Index">Home</a></li>
+                                    <li><a href="~/User/SignIn">Sign in</a></li>
+                                    <li><a href="~/User/SignUp">Register</a></li>
+                                    <li><a href="~/Home/Contact">Contact</a></li>
+
+                                    <li><a href="~/Products/Index">Products</a></li>
+                                    <li><a href="../../Home/Cart">Cart</a></li>
+
+                                </ul>
+
+            }
+            else
+            {
+                                    <ul class="nav navbar-nav pull-right list-inline > li">
+                                        <li><a href="~/Home/Index">Home</a></li>
+                                        <li><a href="~/User/LogOut">Sign Out</a></li>
+                                        <li><a href="~/Home/Contact">Contact</a></li>
+                                        <li><a href="~/Products/Index">Products</a></li>
+                                        <li><a href="../../Home/Cart">Cart</a></li>
+
+                                    </ul>
+                                    <div class="form-group">
+
+                                        <div class="col-lg-5 pull-left">
+                                            <input type="text" id="ser" class="form-control" name="name" placeholder="Search" />
+                                        </div>
+
+                                    </div>
+            }
+
+
+    </nav>
     <!--Start Header-->
-    <div class="row" style=" width:100%; margin-top:10%">
+    <div class="row" style=" width:100%;">
         <div class="col-lg-3"    >
             <aside class=" main-sidebar">
                 <!-- sidebar: style can be found in sidebar.less -->
@@ -67,13 +108,13 @@
                     <ul style=" margin-top: 10%;">
                         <li class="treeview">
                             <a href="~/Admin/Customer">
-                                <i class="fa fa-circle"></i>
-                                <span style="font-size:24px">Customer</span>
+                                <i class=" "></i>
+                                <span style="font-size:24px;background-color:darkgoldenrod">Customer</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu" style=" ">
-                                <li style="font-size: 16px; margin-bottom: 4%"><a href="~/Admin/Cust_Add"><i class="fa fa-circle"></i> Add customer</a></li>
-                                <li style="font-size:16px"><a href="~/Admin/Display_All"><i class="fa fa-circle"></i> View_All</a></li>
+                                <li style="font-size: 16px; margin-bottom: 4%"><a href="~/Admin/Cust_Add"><i class=" "></i> Add new Customer</a></li>
+                                <li style="font-size:16px"><a href="~/Admin/Display_All"><i class=" "></i> All Customer</a></li>
 
                             </ul>
                         </li>
@@ -81,8 +122,8 @@
                     <ul style="">
                         <li class="treeview">
                             <a href="~/Admin/Categories">
-                                <i class="fa fa-circle"></i>
-                                <span style="font-size:24px">Categories</span>
+                                <i class=" "></i>
+                                <span style="font-size: 24px; background-color: darkgoldenrod">Items</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             @{
@@ -91,12 +132,12 @@
 
                             }
                             <ul class="treeview-menu">
-                                <li style="font-size: 18px; margin-bottom: 4%; color:red" class="btn btn-default"><a href="~/Admin/Category_Adding"><i class="fa fa-circle "></i> Add_Cat</a></li>
-                                <li style="font-size:18px" class="btn btn-default"><a href="~/Admin/Categories"><i class="fa fa-circle "></i> View_All</a></li>
-                                @foreach (var v in list)
+                                <li style="font-size: 18px; margin-bottom: 4%; color:red" class="btn btn-default"><a href="~/Admin/Category_Adding"><i class="  "></i> Add New Item</a></li>
+                                <li style="font-size:18px" class="btn btn-default"><a href="~/Admin/Categories"><i class="  "></i> All Items</a></li>
+                                @*@foreach (var v in list)
                                 {
-                                    <li style="font-size:16px"><a href="~/Admin/Cat_Details/@v.Id"><i class="fa fa-circle"></i> @v.Name</a></li>
-                                }
+                                    <li style="font-size:16px"><a href="~/Admin/Cat_Details/@v.Id"><i class=" "></i> @v.Name</a></li>
+                                }*@
 
 
                             </ul>
@@ -106,8 +147,8 @@
                     <ul style=" ">
                         <li class="treeview">
                             <a href="~/Admin/Sub_Categories">
-                                <i class="fa fa-circle"></i>
-                                <span style="font-size:24px">Sub_Categories</span>
+                                <i class=" "></i>
+                                <span style="font-size: 24px; background-color: darkgoldenrod">Sub Items</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             @{
@@ -116,12 +157,12 @@
 
                             }
                             <ul class="treeview-menu" style=" ">
-                                <li style="font-size: 16px;   " class="btn btn-success"><a href="~/Admin/SubCategoryAdd"><i class="fa fa-circle "></i> Add Sub Category</a></li>
-                                <li style="font-size:16px" class=" btn btn-success"><a href="~/Admin/Sub_Categories"><i class="fa fa-circle"></i> All Sub Categories</a></li>
-                                @foreach (var v in klist)
+                                <li style="font-size: 16px;   " class="btn btn-success"><a href="~/Admin/SubCategoryAdd"><i class="  "></i> Add new Sub Item</a></li>
+                                <li style="font-size:16px" class=" btn btn-success"><a href="~/Admin/Sub_Categories"><i class=" "></i> All Sub Items</a></li>
+                                @*@foreach (var v in klist)
                                 {
-                                    <li style="font-size:16px"><a href="~/Admin/Sub_Cat_Details/@v.Id"><i class="fa fa-circle"></i> @v.Name</a></li>
-                                }
+                                    <li style="font-size:16px"><a href="~/Admin/Sub_Cat_Details/@v.Id"><i class=" "></i> @v.Name</a></li>
+                                }*@
 
                             </ul>
 
@@ -130,8 +171,8 @@
                     <ul style=" ">
                         <li class="treeview">
                             <a href="~/Admin/Brand">
-                                <i class="fa fa-circle"></i>
-                                <span style="font-size:24px">Brands</span>
+                                <i class=" "></i>
+                                <span style="font-size: 24px; background-color: darkgoldenrod">Brands</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             @{
@@ -141,12 +182,12 @@
                             }
 
                             <ul class="treeview-menu" style=" ">
-                                <li style="font-size: 16px; padding-bottom: 4%; margin-bottom: 4%;" class="btn btn-info"><a href="~/Admin/AddBrand"><i class="fa fa-circle"></i> Add_Brand</a></li><br/>
-                                <li style="font-size:16px" class=" btn btn-info"><a href="~/Admin/Brand"><i class="fa fa-circle"></i> View_All</a></li>
-                                @foreach (var v in blist)
+                                <li style="font-size: 16px; padding-bottom: 4%; margin-bottom: 4%;" class="btn btn-info"><a href="~/Admin/AddBrand"><i class=" "></i> Add new Brand</a></li><br/>
+                                <li style="font-size:16px" class=" btn btn-info"><a href="~/Admin/Brand"><i class=" "></i>All Brands</a></li>
+                                @*@foreach (var v in blist)
                                 {
-                                    <li style="font-size:16px"><a href="~/Admin/B_Details/@v.Id"><i class="fa fa-circle"></i> @v.Name</a></li>
-                                }
+                                    <li style="font-size:16px"><a href="~/Admin/B_Details/@v.Id"><i class=" "></i> @v.Name</a></li>
+                                }*@
 
                             </ul>
 
@@ -155,14 +196,14 @@
                     <ul style=" ">
                         <li class="treeview">
                             <a href="~/Admin/Product">
-                                <i class="fa fa-circle"></i>
-                                <span style="font-size:24px">Products</span>
+                                <i class=" "></i>
+                                <span style="font-size: 24px; background-color: darkgoldenrod">Products</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
 
                             <ul class="treeview-menu" style=" ">
-                                <li style="font-size:16px; padding-bottom:4%; margin-bottom:4%" class="btn btn-info"><a href="~/Admin/AddProduct"><i class="fa fa-pie-circle "></i> Add_Product</a></li><br/>
-                                <li style="font-size: 16px; padding-top: 4%" class="btn btn-info"><a href="~/Admin/Product"><i class="fa fa-pie-circle "></i> View_All</a></li>
+                                <li style="font-size:16px; padding-bottom:4%; margin-bottom:4%" class="btn btn-info"><a href="~/Admin/AddProduct"><i class="fa fa-pie-circle "></i> Add new Product</a></li><br/>
+                                <li style="font-size: 16px; padding-top: 4%" class="btn btn-info"><a href="~/Admin/Product"><i class="fa fa-pie-circle "></i> All Products</a></li>
                             </ul>
 
                         </li>

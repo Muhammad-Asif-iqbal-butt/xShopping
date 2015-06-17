@@ -17,7 +17,7 @@
 </head>
 <body>
 
-    <div>
+    <div style="background-color:darkkhaki">
         <form action="~/Admin/UpdateC" class="form-horizontal" role="form" method="post">
 
             @Html.HiddenFor(m => Model.Id)
@@ -82,7 +82,7 @@
             <div class="form-group">
                 <label class="control-label col-lg-3" for="note">Note:</label>
                 <div class="col-lg-4">
-                    <textarea  class="form-control" data-val-required="Field is required" required name="note" placeholder=@Model.Note ></textarea>
+                    <textarea class="form-control" data-val-required="Field is required" required name="note" placeholder=@Model.Note></textarea>
                 </div>
             </div>
 

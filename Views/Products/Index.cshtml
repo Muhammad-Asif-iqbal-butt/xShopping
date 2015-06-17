@@ -53,14 +53,14 @@
     
 </head>
 <body>
-    <div class='col-lg-2' style="border:double; margin-top:30px; margin-left:35px" >
+    <div class='col-lg-2' style="border:double; margin-top:30px; margin-left:35px;background-color:darkgoldenrod" >
         <div>
             @foreach (Brand b in Model)
             {
                 <div style=" ">
                     <div>
                         <ul>
-                            <li><a href='~/Products/Items/@b.Id' style="font-family:Algerian; font:xx-large">@b.Name</a></li>
+                            <li><a href='~/Products/Items/@b.Id' style="font:xx-large;color:white">@b.Name</a></li>
                         </ul>
                     </div>
                 </div>
@@ -73,12 +73,12 @@
     <div class="col-lg-offset-2">
         <article class="grid_4 pull-left">
 
-            <table class="Responsive-table">
-               @for(int i = 0, k=0; i < 2; i++)
+            <table class="Responsive-table" style="background-color:darkkhaki">
+               @for(int i = 0, k=0; i < 1; i++)
                 {
 
                     <tr>
-                        @for (int j = 0; j < 2; j++, k++)
+                        @for (int j = 0; j < 1; j++, k++)
                         {
                             <td style="margin-left: 3%; margin-right: 3%; padding-left: 3%; padding-right: 3%; padding-bottom: 3%; padding-top: 3%;">
                                 <div id="myCarousel" class="carousel slide carousel-inner" data-ride="carousel">
@@ -96,27 +96,27 @@
 
                                         <div class="item active">
 
-                                            <img src="~/images/img_2_1_1_(@(k+4)).jpg" alt="Chania" style="width:450px; height:320px">
+                                            <img src="~/images/v1.jpg" alt="No Image" style="width:900px; height:640px">
                                             <p style="background:border-box;  background-color:ActiveCaption; background-color:blanchedalmond; text-decoration-color:whitesmoke"></p>
 
+
+                                        </div>
+                                        @*<div class="item">
+                                            <img src="~/images/img_2_1_1_(@(k+1)).jpg" alt="No Image" style="width: 450px; height: 320px; ">
+                                            <p style="background:border-box;  background-color:ActiveCaption; background-color:blanchedalmond; text-decoration-color:whitesmoke"></p>
+
+                                        </div>
+
+                                        <div class="item">
+                                            <img src="~/img_2_1_1_(@(k+2)).jpg" alt="No Image" style="width: 450px; height: 320px; ">
+                                            <p style="background:border-box;  background-color:ActiveCaption; background-color:blanchedalmond; text-decoration-color:whitesmoke"></p>
 
                                         </div>
                                         <div class="item">
-                                            <img src="~/images/img_2_1_1_(@(k+1)).jpg" alt="Chania" style="width: 450px; height: 320px; ">
+                                            <img src="~/images/img_2_1_1_(@(k+3)).jpg" alt="No Image" style="width: 450px; height: 320px; ">
                                             <p style="background:border-box;  background-color:ActiveCaption; background-color:blanchedalmond; text-decoration-color:whitesmoke"></p>
 
-                                        </div>
-
-                                        <div class="item">
-                                            <img src="~/img_2_1_1_(@(k+2)).jpg" alt="Chania" style="width: 450px; height: 320px; ">
-                                            <p style="background:border-box;  background-color:ActiveCaption; background-color:blanchedalmond; text-decoration-color:whitesmoke"></p>
-
-                                        </div>
-                                        <div class="item">
-                                            <img src="~/images/img_2_1_1_(@(k+3)).jpg" alt="Chania" style="width: 450px; height: 320px; ">
-                                            <p style="background:border-box;  background-color:ActiveCaption; background-color:blanchedalmond; text-decoration-color:whitesmoke"></p>
-
-                                        </div>
+                                        </div>*@
                                     </div>
 
                                     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">

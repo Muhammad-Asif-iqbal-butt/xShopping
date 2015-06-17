@@ -49,22 +49,17 @@
 
                 <div class="col-lg-9 col-md-9 col-sm-12">
                     <div class="col-lg-12 col-sm-12">
-                        <span class="title">SHOPPING CART</span>
+                        <span class="title"> CART</span>
                     </div>
                     <div class="col-lg-12 col-sm-12 hero-feature" style="fill-opacity:initial; background-color:cyan">
                         <div style="background-color:darkkhaki">
                         <form action="~/Home/Purchase/@id" method="post" name="form1">
-                        <table class="table table-bordered tbl-cart">
+                        <table class="table table-bordered tbl-cart" style="background-color:darkkhaki">
                             <thead>
                                 <tr>
                                     <td>ID</td>
                                     <td>Product Name</td>                                     
-                                    <td>Size</td>
-                                    <td>Color</td>
-                                  
                                     <td>Unit Price</td>
-                                    
-                                   
                                 </tr>
                             </thead>
                             @foreach (Cart cart in list)
@@ -89,12 +84,7 @@
                                          
                                         <td> @cart.Id </td>
                                         <td><a href="~/Products/ProductInfo/@kid.Id"></a> @kid.Name</td>
-                                        <td>
-                                            <select name="">
-                                                <option value="" selected="selected">Medium</option>
-
-                                            </select>
-                                        </td>
+                                        
                                         <td>-</td>
                                          
                                         <td class="price">@kid.Price</td>
@@ -125,7 +115,7 @@
 
             }
             else
-            { <h1>Please LogIn to Buy SomeThing</h1>}
+            { <h1>Oooppssss, you havn't logged in yet!!!</h1>}
         </div>
     </div>
 

@@ -17,21 +17,21 @@
 </head>
 <body>
     
-    <div>
+    <div >
         <form action="~/Admin/dCat" class="form-horizontal" role="form" method="post">
 
             @Html.HiddenFor(m => Model.Id)
-            <div class="form-group">
+            <div class="form-group" style="background-color:darkgoldenrod">
                 <label class="control-label col-lg-3" for="name">Name: </label>
                 <label class="control-label col-lg-4" for="name">@Model.Name </label>
 
             </div>
             <div>
 
-                <table border="1" style="margin-top:30%; width:80%; line-height:22PX;">
+                <table border="1" style="background-color:darkkhaki;width:70%">
 
                     <tr><th><h5>ID</h5></th><th><h5>Name</h5></th></tr>
-
+                
                     @foreach (Sub_Categories c in Model.Sub_Categories)
                     {
                         <tr>
@@ -43,7 +43,7 @@
 
                 </table>
                 <div class="form-group">
-                    <div class="col-lg-offset-3 col-lg-7">
+                    <div class="col-lg-offset-3">
                         <input type="submit" value="Delete" class="btn btn-danger" />
                     </div>
                 </div>

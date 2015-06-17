@@ -23,17 +23,12 @@
                                 <p style="font-family: 'Bodoni MT'; font-size: 20px; font-style: italic;"> Color:  Green</p>
                                 <p style="font-family: 'Bodoni MT'; font-size: 20px; font-style: italic;"> Description: @Model.Description</p>
                                 <p style="font-family: 'Bodoni MT'; font-size: 20px; font-style: italic;"> Price: @Model.Price </p>
-                                <p style="font-family: 'Bodoni MT'; font-size: 20px; font-style: italic;">
-
-                                    <label>Size: Small </label>
-                                </p>
-                                <p>
-                                    <iframe src="http://www.facebook.com/plugins/like.php?href=http://www.facebook.com/step.friends&amp;layout=standard&amp;show_faces=&amp;width=230&amp;action=like&amp;colorscheme=light&amp;height=25&amp;font=&amp;locale=en_US&amp;ref=" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:230px; height:25px;" allowtransparency="true"></iframe>
-                                </p>
+                                
+                                
                                 @if(Session["Id"]!=null)
                                     {
                                 <div class="mybutton" style="margin-left: 80px;margin-top: 30px">
-                                    <input type="submit" value="Add To Cart" class="button" />
+                                    <input type="submit" value="Add To Cart" class="btn btn-group-justified" />
                                 </div>
                                  }
                             </div>

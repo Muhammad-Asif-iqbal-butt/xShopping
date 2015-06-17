@@ -21,15 +21,15 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body style="background-color:sandybrown">
+<body style="background-color:darkkhaki">
 
 
     <div class="container-fluid">
 
-        <nav class="navbar navbar-inverse" role="navigation">
+        <nav class="navbar navbar-inverse" role="navigation" style="background-color:lightgoldenrodyellow">
             <div class="navbar-brand">
                 <a class="navbar-text" href="#"> </a>
-                <img src="~/images/logo.jpg" alt="Chania" style="width:100px; height:50px">
+                <img src="~/images/logo.jpg" alt="No Image" style="width:100px; height:50px">
             </div>
 
             @if (Session["user"] == null)
@@ -78,13 +78,13 @@
             <ul style="list-style:none" class="dropdown">
                 @foreach (Categories kat in cat)
                 {
-                    <li style="text-decoration:none; float:left; padding-left:10px">
+                    <li style="text-decoration:none; float:right; padding-left:10px">
                         <div class="dropdown">
                             <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">
                                 @kat.Name
                                 <span class="caret"></span>
                             </button>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu" style="background-color:darkkhaki">
                                 @foreach (Sub_Categories sub in kat.Sub_Categories)
                                 {
 
@@ -107,7 +107,7 @@
 
 
 
-    <div class='row' style="background-color:rosybrown">
+    <div class='row' style="background-color:darkgoldenrod">
 
         @RenderBody()
         <div id="result"> </div>

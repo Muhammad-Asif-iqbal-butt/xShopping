@@ -5,24 +5,24 @@
 
 @using MVC.Models;
 <body style="background-color:darkgray">
-<div>
-    <form action="~/Admin/SearchP" class="form-horizontal" role="form" method="post">
+    <div style="background-color:CaptionText">
+        <form action="~/Admin/SearchP" class="form-horizontal" role="form" method="post">
 
 
-        <div class="form-group">
+            <div class="form-group">
 
-            <div class="col-lg-5 pull-left">
-                <input type="text" class="form-control" name="name" placeholder="Search" />
+                <div class="col-lg-5 pull-left">
+                    <input type="text" class="form-control" name="name" placeholder="Search" />
+                </div>
+                <div class="col-lg- pull-left">
+                    <input type="submit" value="Go" class="btn btn-default" />
+                </div>
             </div>
-            <div class="col-lg- pull-left">
-                <input type="submit" value="Go" class="btn btn-default" />
-            </div>
-        </div>
 
-    </form>
-</div>
+        </form>
+    </div>
 <h1>      </h1>
-<h2  style="background-color:darkgoldenrod">Categories</h2>
+<h2  style="background-color:darkgoldenrod">Items</h2>
 
 @{
     MyEntities my = new MyEntities();
@@ -40,14 +40,15 @@
             <tr>
                 <td><h5>@c.Id</h5></td>
                 <td><h6>@c.Name</h6></td> 
-                <td>
-                    <a style="font-size:16px; color:red" href="~/Admin/Cat_Details/@c.Id">View Details</a>
-                </td>
+                
                 <td style="background-color:red">
                     <a style="font-size:16px; color:papayawhip" href="~/Admin/Cat_Delete/@c.Id">Delete</a>
                 </td>
                 <td>
                     <a style="font-size:16px; color:green" href="~/Admin/Cat_Update/@c.Id">Update</a>
+                </td>
+                <td>
+                    <a style="font-size:16px; color:red" href="~/Admin/Cat_Details/@c.Id">View Details</a>
                 </td>
             </tr>
         }
