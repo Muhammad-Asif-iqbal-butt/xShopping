@@ -63,26 +63,23 @@
             @if (Session["user"] == null)
             {
                 <ul class="nav navbar-nav pull-right list-inline > li">
-                    <li><a href="~/Home/Index">Home</a></li>
-                    <li><a href="~/User/SignIn">Sign in</a></li>
-                    <li><a href="~/User/SignUp">Register</a></li>
-                    <li><a href="~/Home/Contact">Contact</a></li>
-
-                    <li><a href="~/Products/Index">Products</a></li>
-                    <li><a href="../../Home/Cart">Cart</a></li>
-
-                </ul>
+                    <li>@Html.ActionLink("Home", "Index","Home")</li>
+                    <li>@Html.ActionLink("Sign In", "SignIn", "User")</li>
+                    <li>@Html.ActionLink("Sign Up", "SignUp", "User")</li>
+                   
+                    <li>@Html.ActionLink("Products", "Index", "Products")</li>
+                    <li>@Html.ActionLink("Contact US", "Contact", "Home")</li>
+                 </ul>
 
             }
             else
             {
                 <ul class="nav navbar-nav pull-right list-inline > li">
-                    <li><a href="~/Home/Index">Home</a></li>
-                    <li><a href="~/User/LogOut">Sign Out</a></li>
-                    <li><a href="~/Home/Contact">Contact</a></li>
-                    <li><a href="~/Products/Index">Products</a></li>
-                    <li><a href="../../Home/Cart">Cart</a></li>
-
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Products", "Index", "Products")</li>
+                    <li>@Html.ActionLink("Contact US", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Sign Out", "LogOut", "User")</li>
+                    <li>@Html.ActionLink("Shopping Cart", "Cart", "Home")</li>
                 </ul>
                 <div class="form-group">
 
