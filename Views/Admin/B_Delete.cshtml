@@ -17,7 +17,7 @@
 </head>
 <body>
 
-    <div>
+    <div style="background-color:darkgoldenrod">
         <form action="~/Admin/dBrand" class="form-horizontal" role="form" method="post">
 
             @Html.HiddenFor(m => Model.Id)
@@ -28,9 +28,9 @@
             </div>
             <div>
 
-                <table border="1" style="margin-top:15%; width:80%; line-height:22PX;">
+                <table border="1" style="width:80%; line-height:22PX;background-color:darkkhaki">
 
-                    <tr><th><h5>ID</h5></th><th><h5>Name</h5></th><th><h5>Description</h5></th><th><h5>Color</h5></th><th><h5>Size</h5></th><th><h5>Price</h5></th></tr>
+                    <tr><th><h5>ID</h5></th><th><h5>Name</h5></th><th><h5>Description</h5></th><<th><h5>Price</h5></th></tr>
 
                     @foreach (Product c in Model.Product)
                     {
@@ -38,8 +38,6 @@
                             <td><h5>@c.Id</h5></td>
                             <td><h6>@c.Name</h6></td>
                             <td><h6>@c.Description</h6></td>
-                            <td> <select><option>Yellow</option></select></td>
-                            <td><select><option>Medium</option></select></td>
                             <td><h6>@c.Price</h6></td> 
                         </tr>
                     }
